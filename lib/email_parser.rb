@@ -14,10 +14,7 @@ class EmailAddressParser
 
     def parse
         parsed_emails = []
-        @emails.split(/[,\s]+/).map do | email |
-            email
-        end.uniq 
-        # parsed_emails
+        @emails.split(/[,\s]+/).map { |email| email }.uniq 
     end
 
 end
