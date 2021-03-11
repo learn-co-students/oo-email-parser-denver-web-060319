@@ -6,15 +6,17 @@ require 'pry'
 # or whitespace (' ').
 
 class EmailAddressParser
-    attr_accessor :email_addresses
-    
-    def initialize(emails)
-        @emails = emails
-    end
+  attr_accessor :emails
+  
+  def initialize(emails)
+    @emails = emails
+  end
 
-    def parse
-        parsed_emails = []
-        @emails.split(/[,\s]+/).map { |email| email }.uniq 
-    end
+  def parse
+    emails.split(/[,\s]+/).uniq 
+
+    # NO REGEX SET UP FOR STUDENTS THAT HAVEN'T SEEN REGEX YET
+    # emails.split(", ").join(" ").split(" ").uniq
+  end
 
 end
